@@ -1,0 +1,29 @@
+Swagger pozwala dostarczyc wygodnie narzedzie do dokumentowania waszego
+rest api, do jego testowania, sprawdzania w jaki sposob zarzadzac tym rest api
+
+1. Dolaczamy dependency
+
+    Baza ktora potrzebuje swagger
+    <dependency>
+	   <groupId>io.springfox</groupId>
+	   <artifactId>springfox-swagger2</artifactId>
+	   <version>${swagger.version}</version>
+	</dependency>
+
+	Gui swagger
+	<dependency>
+    	   <groupId>io.springfox</groupId>
+    	   <artifactId>springfox-swagger-ui</artifactId>
+    	   <version>${swagger.version}</version>
+    </dependency>
+
+2. Przygotowujemy prosta klase konfiguracyjna - u nas nazywac sie bedzie
+   SwaggerConfig
+
+3. Po dokonaniu konfiguracji opisanej powyzej masz mozliwosc odwolania sie
+   do generowanej dokumentacji za pomoca:
+
+   JSON ---> http://localhost:8080/v2/api-docs
+   UI   ---> http://localhost:8080/swagger-ui.html
+
+4. Swagger dynamicznie reaguje na wszelkie zmiany waszego api.
